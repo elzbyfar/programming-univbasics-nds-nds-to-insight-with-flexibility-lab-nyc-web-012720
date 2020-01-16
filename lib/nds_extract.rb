@@ -7,7 +7,6 @@ require 'directors_database'
 def flatten_a_o_a(aoa)
   result = []
   i = 0
-
   while i < aoa.length do
     k = 0
     while k < aoa[i].length do
@@ -16,7 +15,6 @@ def flatten_a_o_a(aoa)
     end
     i += 1
   end
-
   result
 end
 
@@ -29,25 +27,19 @@ def movie_with_director_name(director_name, movie_data)
     :director_name => director_name
   }
 end
-
-
-# Your code after this point
-
+  
 def movies_with_director_key(name, movies_collection)
-  # GOAL: For each Hash in an Array (movies_collection), provide a collection
-  # of movies and a directors name to the movie_with_director_name method
-  # and accumulate the returned Array of movies into a new Array that's
-  # returned by this method.
-  #
-  # INPUT:
-  # * name: A director's name
-  # * movies_collection: An Array of Hashes where each Hash represents a movie
-  #
-  # RETURN:
-  #
-  # Array of Hashes where each Hash represents a movie; however, they should all have a
-  # :director_name key. This addition can be done by using the provided
-  # movie_with_director_name method
+  
+  result = []
+  i = 0 
+  while i < movies_collection.length do 
+    result << movie_with_director_name(name, movies_collection[i])
+    i+=1 
+  end
+  
+  # variable = movies_collection.map do |movie| movie_with_director_name(name, movie) end 
+  
+  result
 end
 
 
@@ -63,6 +55,22 @@ def gross_per_studio(collection)
   #
   # Hash whose keys are the studio names and whose values are the sum
   # total of all the worldwide_gross numbers for every movie in the input Hash
+  
+  result = {} 
+  each_gross = 0 
+  i = 0 
+  
+  while i < collection.length do 
+   each_gross = collection[i][:worldwide_gross]
+   result["testingStudio"] = each_gross
+    i+=1 
+  end
+  
+  
+  
+  pp result
+  result
+  
 end
 
 def movies_with_directors_set(source)
@@ -76,6 +84,28 @@ def movies_with_directors_set(source)
   #
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
+  
+  result = {}
+  inner_arr = []
+  
+  i = 0 
+  
+  while i < source.length do 
+    
+    j = 0 
+    while j < source[i].length do 
+      # inner_arr << source[i][:movies][j][:title]
+      # :director_name = source[:name]
+      # result[:director_name] = source[i][:movies]
+      j += 1 
+    end 
+    i += 1   
+  end 
+  
+  # result << inner_arr
+  
+  
+  # puts result 
 end
 
 # ----------------    End of Your Code Region --------------------
