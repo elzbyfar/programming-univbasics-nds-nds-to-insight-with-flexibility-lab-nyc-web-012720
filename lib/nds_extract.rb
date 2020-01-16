@@ -63,20 +63,22 @@ def movies_with_directors_set(source)
   
   result = []
 
-  # i = 0 
-  # while i < source.length do 
-  #   result << source[i][:movies]
-  #   j = 0 
-  #   while j < source[i][:movies].length do
-  #     result[i][:]
-  #     j+=1 
-  #   end
-  #   i+=1 
-  # end  
+  i = 0 
+  while i < source.length do 
+    films = source[i][:movies]
+    name = source[i][:name]
+    result << films
+      j = 0 
+      while j < films.length do 
+        films[j][:director_name] = name 
+        j+=1 
+      end 
+    i+=1 
+  end 
   
   binding.irb
   # pp result
-  # result
+  result
 
 end
 
