@@ -82,8 +82,8 @@ def gross_per_studio(collection)
   # end
 
   # pp result
-  # result
-  binding.irb 
+  result
+  # binding.irb 
   
 end
 
