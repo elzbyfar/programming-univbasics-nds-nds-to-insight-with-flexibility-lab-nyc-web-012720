@@ -68,7 +68,7 @@ def gross_per_studio(collection)
     if !result[studio]
       result[studio] = gross
     else 
-      result[studio] = (result[:gross] + gross)
+      result[studio] = result[studio] + gross
     end
       
     i+=1  
