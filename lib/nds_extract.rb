@@ -65,11 +65,10 @@ def gross_per_studio(collection)
    result["testingStudio"] = each_gross
     i+=1 
   end
-  
-  
-  
+
   pp result
   result
+  binding.irb 
   
 end
 
