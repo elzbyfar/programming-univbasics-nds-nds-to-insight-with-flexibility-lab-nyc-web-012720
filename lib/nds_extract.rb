@@ -77,7 +77,7 @@ def movies_with_directors_set(source)
   end 
   
   # binding.irb
-  # pp result
+  pp result
   result
 
 end
