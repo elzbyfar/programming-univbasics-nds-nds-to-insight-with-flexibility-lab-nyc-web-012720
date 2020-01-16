@@ -29,22 +29,20 @@ def movie_with_director_name(director_name, movie_data)
 end
   
 def movies_with_director_key(name, movies_collection)
-  
   result = []
   i = 0 
   while i < movies_collection.length do 
     result << movie_with_director_name(name, movies_collection[i])
     i+=1 
   end
-  
   # variable = movies_collection.map do |movie| movie_with_director_name(name, movie) end 
-  
   result
 end
 
 
 def gross_per_studio(collection)
   result = {} 
+  
   i = 0 
   while i < collection.length do 
     studio = collection[i][:studio]
@@ -56,13 +54,14 @@ def gross_per_studio(collection)
     end
     i+=1  
   end 
+  
 result
+
 end
 
 def movies_with_directors_set(source)
-  
   result = []
-
+  
   i = 0 
   while i < source.length do 
     films = source[i][:movies]
@@ -76,8 +75,6 @@ def movies_with_directors_set(source)
     i+=1 
   end 
   
-  binding.irb
-  # pp result
   result
 
 end
