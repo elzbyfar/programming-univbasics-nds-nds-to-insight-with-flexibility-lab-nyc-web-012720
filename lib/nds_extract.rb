@@ -82,7 +82,7 @@ def movies_with_directors_set(source)
   
   
   binding.irb 
-  result
+  pp result
   
 
 end
