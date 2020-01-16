@@ -57,7 +57,8 @@ def gross_per_studio(collection)
   # total of all the worldwide_gross numbers for every movie in the input Hash
   
   result = {} 
-  each_gross = 0 
+  sum = 0 
+  
   i = 0 
   
   while i < collection.length do 
